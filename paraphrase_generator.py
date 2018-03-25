@@ -1,12 +1,12 @@
 """
 @Author : Aryamaan Parikh
 
-Take a paraphrase.
-Pass it into mtranslate
-Translate into every language available
-Store translated sentences in list
-Call google API again
-Translate back into english
+Takes a paraphrase.
+Passes it into mtranslate
+Translates into every language available from english/source language
+Stores translated sentences in list
+Calls google API again
+Translates back into english/source language
 You've got a much larger set of paraphrases !
 
 Note :
