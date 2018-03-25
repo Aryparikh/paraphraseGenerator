@@ -13,3 +13,8 @@ This method utilizes the semantic and syntactic variances in languages,  and gen
 It really helps when you’re lacking data size consistency, as well as with data scaling. (Larger the dataset, better the results). The dataset is relevant as well as varied
 at the same time ! Slow, but that’s unhelpable because of the multiple API calls being made.
 
+Dependencies :
+
+You must have the following python libraries ;
+- mtranslate
+- googletrans
