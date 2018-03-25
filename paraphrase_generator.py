@@ -12,6 +12,15 @@ You've got a much larger set of paraphrases !
 Note :
 What about indian languages ? Use them if you want to scale your data even higher.
 
+
+USAGE :
+
+sent = ["What a wonderful day to go for a ride in the park"]
+sentMany = ["What a wonderful day to go for a ride in the park","It is not everyday that you encounter such weather."]
+
+opSent = paragen(sent)
+opSentMany = paragen(sentMany)
+
 """
 import mtranslate
 from googletrans import Translator
@@ -69,11 +78,3 @@ def paragen(engList):
     print(oP)
     return oP
 
-
-"""
-sent = ["What a wonderful day to go for a ride in the park"]
-sentMany = ["What a wonderful day to go for a ride in the park","It is not everyday that you encounter such weather."]
-
-opSent = paragen(sent)
-opSentMany = paragen(sentMany)
-"""
