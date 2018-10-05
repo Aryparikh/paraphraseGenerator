@@ -38,6 +38,7 @@ languages = ['af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs',
              'tl', 'tg', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'uz', 'vi', 
              'cy', 'xh', 'yi', 'yo', 'zu']
 
+#105 Languages ! Remember to make a [(resultantList)] after paraphrasing, to avoid redundancy !
 
 
 def paragen(engList):
