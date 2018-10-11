@@ -47,9 +47,13 @@ def paragen(engList):
     paraphrases = []
     for t in keyPhs:
         for value in languages:
+          try:
             buf = mtranslate.translate(t,value,"en") # Why faulty ? - Depends on t + Py Version !
-            print buf
+            print(buf)
             translatedPhrases.append(buf)
+           except IOError:
+            print("\n\n\n\n\n Connection Error ; Next Loop \n\n\n\n\n ")
+            continue
 
     # # ALTERNATIVE
     # translating=Translator()
@@ -62,11 +66,25 @@ def paragen(engList):
 
     
     #translatedPhrases contains strings of phrases of different languages.
+    #If this doesn't work, comment this block out and uncomment below block
     for x in translatedPhrases:
-        translator = Translator()
-        v = translator.translate(x,"en").text
-        print(v)
-        paraphrases.append(v)
+        try:
+          translator = Translator()
+          v = translator.translate(x,"en").text
+          print(v)
+          paraphrases.append(v)
+        except IOError:
+          print("\n\n\n\n\n Connection Error ; Next Loop \n\n\n\n\n ")
+          continue
+        
+#     for x in translatedPhrases:
+#         try:
+#             buf = mtranslate.translate(x,to_language = "en",from_language ="auto")
+#             print(buf)
+#             paraphrases.append(str(buf))
+#         except IOError:
+#             print("\n\n\n\n\n Connection Error ; Next Loop \n\n\n\n\n ")
+#             continue
 
     oP = []
     for t in paraphrases:
@@ -81,6 +99,7 @@ def paragen(engList):
 
 
     oP = oP[1:]
+    oP = list(set(oP))
     print(oP)
     return oP
 
